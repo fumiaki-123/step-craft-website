@@ -5,284 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step Craft - 総合Webソリューション・事業推進サービス</title>
     <meta name="description" content="広告運用代行からWebサイト制作、画像制作、コンサルティング、SIM営業販売まで。貴社の事業成長を総合的にサポートします。">
-    <meta name="keywords" content="広告運用代行,ホームページ制作,Webサービス制作,画像制作,コンサルティング,SIM営業,事業推進">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- プログレスバー -->
-    <div class="progress-bar"></div>
-
     <!-- ヘッダー -->
-    <header>
-        <nav class="container">
+    <header class="header">
+        <div class="container">
             <div class="logo">Step Craft</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">ホーム</a></li>
-                <li><a href="services.html">サービス</a></li>
-                <li><a href="portfolio.html">制作事例</a></li>
-                <li><a href="pricing.html">料金プラン</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-                <li><a href="about.html">会社概要</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#vision">Step Craftが目指す未来</a></li>
+                    <li><a href="#services">仕事を知る</a></li>
+                    <li><a href="#people">人を知る</a></li>
+                    <li><a href="#environment">環境を知る</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+                    <a href="#consultation" class="btn btn-primary">無料相談</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main id="home">
-        <!-- ヒーローセクション -->
-        <section class="hero">
-            <div class="container">
-                <h1><span class="gradient-text">総合Webソリューション</span>で<br>貴社の事業成長を<strong>全面サポート</strong></h1>
-                <p class="text-large">広告運用からWebサイト制作、コンサルティングまで。<br>ワンストップで貴社のビジネス課題を解決します。</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                    <a href="#problems" class="cta-button cta-button-primary">今すぐ詳細を見る</a>
-                    <a href="portfolio.html" class="cta-button cta-button-secondary">制作事例を見る</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 事業内容セクション -->
-        <section id="problems">
-            <div class="container">
-                <h2 class="section-title decorative-line">提供サービス</h2>
-                <p class="section-subtitle">貴社のビジネス成長を支える幅広いサービスラインナップ</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #ff6b6b;">📱</div>
-                        <h3>広告運用代行</h3>
-                        <p>Google・Yahoo・SNS広告の運用を専門スタッフが代行。<strong>ROI向上</strong>と効果的な集客を実現します。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #4ecdc4;">🌐</div>
-                        <h3>HP・Webサービス制作</h3>
-                        <p>レスポンシブ対応の<strong>高品質なWebサイト</strong>を制作。SEO対策も万全で集客力の高いサイトをお届けします。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #45b7d1;">🎨</div>
-                        <h3>画像制作</h3>
-                        <p>バナー・商品画像・ロゴなど、<strong>ブランディングに必要な画像素材</strong>を高品質で制作いたします。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 追加サービスセクション -->
-        <section>
-            <div class="container">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #f39c12;">💼</div>
-                        <h3>コンサルティング</h3>
-                        <p>ビジネス戦略立案から実行支援まで、<strong>専門コンサルタント</strong>が貴社の成長をサポートします。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #9b59b6;">📶</div>
-                        <h3>SIM営業販売</h3>
-                        <p>法人向けSIMサービスの提案・販売を代行。<strong>通信コスト削減</strong>と業務効率化をご提案します。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #e74c3c;">🚀</div>
-                        <h3>事業推進代行</h3>
-                        <p>新規事業立ち上げから既存事業の改善まで、<strong>事業推進のプロ</strong>が実行をサポートします。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 解決策提示セクション -->
-        <section id="solution" class="hero primary" style="padding: 4rem 0;">
-            <div class="container">
-                <h2 class="section-title" style="color: white; margin-bottom: 2rem;">ワンストップで<br><span class="gradient-text">ビジネス課題</span>を解決</h2>
-                <p class="text-large" style="text-align: center; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto; color: var(--accent-platinum);">
-                    <strong>豊富な実績</strong>、<strong>迅速な対応</strong>、<strong>確かな品質</strong><br>
-                    幅広いサービスラインナップで、貴社の成長を総合的にサポートします。
-                </p>
-                <div class="text-center">
-                    <a href="services.html" class="cta-button cta-button-primary">サービス詳細を見る</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3つの特徴セクション -->
-        <section id="features">
-            <div class="container">
-                <h2 class="section-title decorative-line">サービスの3つの強み</h2>
-                <p class="section-subtitle">革新的なAI技術とプロフェッショナルな撮影技術の融合により、御社のマーケティング戦略を強力にサポート</p>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #667eea;">✨</div>
-                        <h3>カスタマイズ可能なAIモデル生成</h3>
-                        <p>ブランドイメージやターゲット層に合わせて、年齢・体型・雰囲気を精密に調整したAIモデルを生成。モデルキャスティングの時間とコストを大幅に削減いたします。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #764ba2;">💰</div>
-                        <h3>コスト効率と品質の両立</h3>
-                        <p>従来の撮影コストを約70%削減しながら、プロフェッショナルレベルの品質を維持。明確な料金体系で予算管理も安心です。</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon" style="color: #45b7d1;">⚡</div>
-                        <h3>迅速なターンアラウンド</h3>
-                        <p>商品お預かりから最短3営業日で納品。マーケティングキャンペーンのタイトなスケジュールにも対応し、ビジネス機会を逃さず、競争優位性を確保します。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- サービスの流れセクション -->
-        <section id="flow">
-            <div class="container">
-                <h2 class="section-title decorative-line">サービスの流れ</h2>
-                <p class="section-subtitle">シンプルかつ4ステップで、理想の商品画像をお届けいたします</p>
-                <div class="features-grid">
-                    <div class="feature-card glow">
-                        <div style="background: var(--gradient-accent); color: var(--primary-dark); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem; box-shadow: var(--shadow-lg);">1</div>
-                        <h3>ご相談</h3>
-                        <p>お電話またはメールでご希望をお聞かせください。理想のイメージやモデルの雰囲気をお伺いし、最適な撮影プランをご提案いたします。</p>
-                    </div>
-                    <div class="feature-card glow">
-                        <div style="background: var(--gradient-accent); color: var(--primary-dark); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem; box-shadow: var(--shadow-lg);">2</div>
-                        <h3>商品のご発送</h3>
-                        <p>撮影する商品を当社スタジオまでお送りください。送料は当社負担。商品は大切にお預かりし、撮影後は確実にご返送いたします。</p>
-                    </div>
-                    <div class="feature-card glow">
-                        <div style="background: var(--gradient-accent); color: var(--primary-dark); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem; box-shadow: var(--shadow-lg);">3</div>
-                        <h3>構成案・モデルのご提案</h3>
-                        <p>お客様のご要望に基づき、撮影構成案とAIモデルのサンプルをご提案。修正は無料で承りますので、納得いくまでお打ち合わせできます。</p>
-                    </div>
-                    <div class="feature-card glow">
-                        <div style="background: var(--gradient-accent); color: var(--primary-dark); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem; box-shadow: var(--shadow-lg);">4</div>
-                        <h3>制作・納品</h3>
-                        <p>ご承認後、プロの技術とAI技術を駆使して撮影・制作を開始。完成した画像は高解像度データでお渡しし、商用利用も自由です。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 料金プランセクション -->
-        <section id="pricing">
-            <div class="container">
-                <h2 class="section-title decorative-line">料金プラン</h2>
-                <p class="section-subtitle">シンプルで明確な料金体系で、プロクオリティの商品画像をお手頃価格で提供</p>
-                <div class="pricing-grid" style="max-width: 600px; margin: 0 auto;">
-                    <div class="pricing-card featured">
-                        <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Amazon販売画像セット</h3>
-                        <div class="price">¥39,800</div>
-                        <p style="margin-bottom: 2rem; opacity: 0.9;">EC販売に必要な画像が全て揃います</p>
-                        <ul class="price-features">
-                            <li>メイン画像×1枚</li>
-                            <li>AIモデル着用画像×1枚</li>
-                            <li>サブ画像×4枚</li>
-                            <li>高解像度データ納品</li>
-                            <li>商用利用権付き</li>
-                            <li>修正1回無料</li>
-                        </ul>
-                        <a href="contact.html" class="cta-button cta-button-primary glow">今すぐ相談する</a>
-                    </div>
-                </div>
-                <p style="text-align: center; margin-top: 2rem; color: #666;">
-                    ※追加画像は1枚5,000円から承ります。詳細は<a href="pricing.html" style="color: #667eea;">料金ページ</a>をご確認ください。
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">課題を解決し、技術を繋ぎ、<br>成長を拓く。</h1>
+                <p class="hero-description">
+                    Step Craftは、広告運用からWebサイト制作、コンサルティングまで、<br>
+                    幅広いソリューションで企業の成長を総合的にサポートします。
                 </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 実績・統計セクション -->
-        <section class="hero primary" style="padding: 4rem 0;">
-            <div class="container">
-                <h2 class="section-title" style="color: white;">信頼の実績</h2>
-                <p class="section-subtitle" style="color: var(--accent-platinum); margin-bottom: 3rem;">数値で実証される導入効果と企業様からの高い評価</p>
-                <div class="features-grid">
-                    <div class="feature-card glass" style="color: white; border: 1px solid rgba(255,255,255,0.2);">
-                        <div class="stat-number" data-count="500" style="font-size: 4rem; font-weight: 900; color: var(--accent-green); font-family: var(--font-display);">0</div>
-                        <h3 style="color: white;">制作実績</h3>
-                        <p style="color: var(--accent-platinum);">多くの企業様にご利用いただき、EC売上向上に貢献しています。</p>
+    <!-- Step Craftが目指す未来 -->
+    <section id="vision" class="section vision">
+        <div class="container">
+            <h2 class="section-title">Step Craftが目指す未来</h2>
+            <div class="vision-content">
+                <p>デジタル技術の進歩により、企業を取り巻く環境は日々変化しています。</p>
+                <p>私たちは、その変化に対応し、お客様のビジネスを次のステップへと導くパートナーとして存在します。</p>
+                <p>技術と創造力を組み合わせ、持続可能な成長を実現するソリューションを提供し続けます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 仕事を知る -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">仕事を知る</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>広告運用代行</h3>
+                    <p>Google・Yahoo・SNS広告の運用を専門スタッフが代行。ROI向上と効果的な集客を実現します。</p>
+                    <ul>
+                        <li>戦略立案・実行</li>
+                        <li>効果測定・改善</li>
+                        <li>レポート作成</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>HP・Webサービス制作</h3>
+                    <p>レスポンシブ対応の高品質なWebサイトを制作。SEO対策も万全で集客力の高いサイトをお届けします。</p>
+                    <ul>
+                        <li>企画・設計</li>
+                        <li>デザイン・開発</li>
+                        <li>運用・保守</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>画像制作</h3>
+                    <p>バナー・商品画像・ロゴなど、ブランディングに必要な画像素材を高品質で制作いたします。</p>
+                    <ul>
+                        <li>バナーデザイン</li>
+                        <li>ロゴ制作</li>
+                        <li>商品画像加工</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>コンサルティング</h3>
+                    <p>ビジネス戦略立案から実行支援まで、専門コンサルタントが貴社の成長をサポートします。</p>
+                    <ul>
+                        <li>戦略立案</li>
+                        <li>業務改善</li>
+                        <li>実行支援</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📶</div>
+                    <h3>SIM営業販売</h3>
+                    <p>法人向けSIMサービスの提案・販売を代行。通信コスト削減と業務効率化をご提案します。</p>
+                    <ul>
+                        <li>コスト分析</li>
+                        <li>最適プラン提案</li>
+                        <li>導入サポート</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>事業推進代行</h3>
+                    <p>新規事業立ち上げから既存事業の改善まで、事業推進のプロが実行をサポートします。</p>
+                    <ul>
+                        <li>事業企画</li>
+                        <li>市場調査</li>
+                        <li>推進管理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人を知る -->
+    <section id="people" class="section people">
+        <div class="container">
+            <h2 class="section-title">人を知る</h2>
+            <div class="people-content">
+                <h3>チームメンバー紹介</h3>
+                <p>多様な経験とスキルを持つメンバーが、お客様のプロジェクトを成功に導きます。</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h4>広告運用チーム</h4>
+                        <p>デジタルマーケティングのエキスパート集団</p>
                     </div>
-                    <div class="feature-card glass" style="color: white; border: 1px solid rgba(255,255,255,0.2);">
-                        <div class="stat-number" data-count="98" style="font-size: 4rem; font-weight: 900; color: var(--accent-green); font-family: var(--font-display);">0</div>
-                        <h3 style="margin-top: 0.5rem; color: white;">満足度（%）</h3>
-                        <p style="color: var(--accent-platinum);">お客様からの高い評価をいただき、リピート率も90%超となっています。</p>
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h4>開発チーム</h4>
+                        <p>最新技術を駆使したWeb制作のプロフェッショナル</p>
                     </div>
-                    <div class="feature-card glass" style="color: white; border: 1px solid rgba(255,255,255,0.2);">
-                        <div class="stat-number" data-count="3" style="font-size: 4rem; font-weight: 900; color: var(--accent-green); font-family: var(--font-display);">0</div>
-                        <h3 style="margin-top: 0.5rem; color: white;">最短納期（日）</h3>
-                        <p style="color: var(--accent-platinum);">スピード対応で、お急ぎの案件にも柔軟に対応いたします。</p>
+                    <div class="team-member">
+                        <div class="member-photo"></div>
+                        <h4>コンサルタント</h4>
+                        <p>豊富な経験を持つビジネス戦略のスペシャリスト</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- お客様の声セクション -->
-        <section>
-            <div class="container">
-                <h2 class="section-title decorative-line">導入企業様の声</h2>
-                <p class="section-subtitle">当サービスを導入いただいた企業様から高い評価をいただいております</p>
-                <div class="features-grid">
-                    <div class="feature-card border-gradient glow">
-                        <div style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem; font-size: var(--font-size-lg); color: var(--text-secondary);">"従来の撮影の半分以下のコストで、これほどクオリティの高い画像が作れるとは驚きでした。売上も30%アップしました！"</p>
-                        <strong style="color: var(--accent-corporate);">- アパレル業界大手企業 マーケティング部長</strong>
+    <!-- 環境を知る -->
+    <section id="environment" class="section environment">
+        <div class="container">
+            <h2 class="section-title">環境を知る</h2>
+            <div class="environment-content">
+                <h3>働く環境</h3>
+                <p>クライアントとの密接な連携と、チーム一体となったプロジェクト推進を重視しています。</p>
+                <div class="environment-features">
+                    <div class="feature">
+                        <h4>柔軟な働き方</h4>
+                        <p>リモートワークと対面での打ち合わせを適切に組み合わせ、効率的なプロジェクト進行を実現</p>
                     </div>
-                    <div class="feature-card border-gradient glow">
-                        <div style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem; font-size: var(--font-size-lg); color: var(--text-secondary);">"理想的なモデルが見つからず困っていましたが、AIで完璧なイメージを実現できました。スピードも抜群です。"</p>
-                        <strong style="color: var(--accent-gold);">- コスメ会社 B様</strong>
+                    <div class="feature">
+                        <h4>専門性の追求</h4>
+                        <p>各分野のエキスパートが最新のトレンドと技術をキャッチアップし、高品質なサービスを提供</p>
                     </div>
-                    <div class="feature-card border-gradient glow">
-                        <div style="color: var(--accent-gold); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                        <p style="font-style: italic; margin-bottom: 1rem; font-size: var(--font-size-lg); color: var(--text-secondary);">"撮影の手配が本当に楽になりました。商品を送るだけで、プロ品質の画像が届くのは革命的です。"</p>
-                        <strong style="color: var(--accent-gold);">- 雑貨会社 C様</strong>
+                    <div class="feature">
+                        <h4>クライアントファースト</h4>
+                        <p>お客様の課題解決を最優先に、柔軟で迅速な対応を心がけています</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTAセクション -->
-        <section class="hero primary" style="text-align: center; padding: 5rem 0;">
-            <div class="container">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem; color: white;">まずは<span class="gradient-text">無料相談</span>から始めませんか</h2>
-                <p class="text-large" style="margin-bottom: 3rem; color: var(--accent-platinum); max-width: 700px; margin-left: auto; margin-right: auto;">
-                    お見積もり・導入相談は無料でご対応<br>
-                    専門コンサルタントが御社の課題に最適なソリューションをご提案いたします
-                </p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="cta-button cta-button-primary glow">無料相談はこちら</a>
-                    <a href="portfolio.html" class="cta-button cta-button-secondary">制作事例を見る</a>
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Join Our Team</h2>
+            <div class="contact-content">
+                <h3>お問い合わせ</h3>
+                <p>サービスについてのご相談・お見積りはお気軽にお問い合わせください。</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>メール</strong>
+                        <p>info@stepcraft.jp</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>電話</strong>
+                        <p>03-1234-5678</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>営業時間</strong>
+                        <p>平日 9:00-18:00</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+            <div id="consultation" class="consultation">
+                <h3>無料相談</h3>
+                <p>まずはお気軽にご相談ください。専門スタッフがお客様の課題をお伺いし、最適なソリューションをご提案いたします。</p>
+                <a href="mailto:info@stepcraft.jp" class="btn btn-primary">無料相談を申し込む</a>
+            </div>
+        </div>
+    </section>
 
     <!-- フッター -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Step Craft</h4>
-                    <p>総合Webソリューションで、<br>貴社の事業成長を全面サポート。</p>
-                </div>
-                <div class="footer-section">
-                    <h4>サービス</h4>
-                    <ul>
-                        <li><a href="services.html">サービス紹介</a></li>
-                        <li><a href="portfolio.html">制作事例</a></li>
-                        <li><a href="pricing.html">料金プラン</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>会社情報</h4>
-                    <ul>
-                        <li><a href="about.html">会社概要</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                        <li><a href="#privacy">プライバシーポリシー</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>お問い合わせ</h4>
-                    <p>📧 info@stepcraft.jp<br>📞 03-1234-5678<br>営業時間：平日9:00-18:00</p>
+                <div class="footer-logo">Step Craft</div>
+                <div class="footer-links">
+                    <a href="#privacy">プライバシーポリシー</a>
+                    <a href="#terms">利用規約</a>
                 </div>
             </div>
             <div class="footer-bottom">
