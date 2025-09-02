@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - AI Model Photo</title>
+    <meta name="description" content="AI Model Photoへのお問い合わせ。無料相談受付中。お気軽にご相談ください。">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- プログレスバー -->
+    <div class="progress-bar"></div>
+
+    <!-- ヘッダー -->
+    <header>
+        <nav class="container">
+            <div class="logo">AI Model Photo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="services.html">サービス</a></li>
+                <li><a href="portfolio.html">制作事例</a></li>
+                <li><a href="pricing.html">料金プラン</a></li>
+                <li><a href="contact.html" class="active">お問い合わせ</a></li>
+                <li><a href="about.html">会社概要</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="container">
+                <h1>お問い合わせ</h1>
+                <p>無料相談受付中！<br>お気軽にご相談ください</p>
+            </div>
+        </section>
+
+        <!-- 問い合わせ方法選択 -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">お問い合わせ方法をお選びください</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #667eea;">📧</div>
+                        <h3>メールフォーム</h3>
+                        <p>24時間受付。詳細なご相談内容をお聞かせください。1営業日以内にご返信いたします。</p>
+                        <a href="#contact-form" class="cta-button" style="margin-top: 1rem; display: inline-block;">フォームで相談</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #764ba2;">📞</div>
+                        <h3>お電話</h3>
+                        <p>すぐに相談したい方はお電話で。専門スタッフが丁寧にお答えいたします。</p>
+                        <div style="margin: 1rem 0; font-weight: bold; color: #333;">03-1234-5678</div>
+                        <div style="color: #666; font-size: 0.9rem;">営業時間：平日9:00-18:00</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" style="color: #45b7d1;">💬</div>
+                        <h3>オンライン相談</h3>
+                        <p>ZoomやTeamsでのオンライン相談も可能です。画面共有で詳しくご説明いたします。</p>
+                        <a href="#contact-form" class="cta-button" style="margin-top: 1rem; display: inline-block;">相談予約</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section id="contact-form" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">お問い合わせフォーム</h2>
+                <div style="max-width: 800px; margin: 0 auto; background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1);">
+                    <form>
+                        <div class="form-group">
+                            <label for="inquiry-type">お問い合わせ種別 *</label>
+                            <select id="inquiry-type" required>
+                                <option value="">選択してください</option>
+                                <option value="consultation">無料相談</option>
+                                <option value="quote">お見積もり依頼</option>
+                                <option value="order">制作依頼</option>
+                                <option value="support">サポート</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="company">会社名</label>
+                                <input type="text" id="company" placeholder="株式会社〇〇">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">お名前 *</label>
+                                <input type="text" id="name" required placeholder="山田 太郎">
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="email">メールアドレス *</label>
+                                <input type="email" id="email" required placeholder="example@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">電話番号</label>
+                                <input type="tel" id="phone" placeholder="03-1234-5678">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-category">商品カテゴリ</label>
+                            <select id="product-category">
+                                <option value="">選択してください</option>
+                                <option value="apparel">アパレル・ファッション</option>
+                                <option value="cosmetics">コスメ・美容</option>
+                                <option value="accessories">アクセサリー・時計</option>
+                                <option value="lifestyle">ライフスタイル商品</option>
+                                <option value="sports">スポーツ・アウトドア</option>
+                                <option value="electronics">電子機器・ガジェット</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">予算感</label>
+                            <select id="budget">
+                                <option value="">選択してください</option>
+                                <option value="basic">基本プラン（〜5万円）</option>
+                                <option value="standard">標準プラン（5〜10万円）</option>
+                                <option value="premium">プレミアムプラン（10〜20万円）</option>
+                                <option value="enterprise">エンタープライズ（20万円〜）</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">希望納期</label>
+                            <select id="timeline">
+                                <option value="">選択してください</option>
+                                <option value="urgent">至急（1-2日）</option>
+                                <option value="standard">標準（3-5営業日）</option>
+                                <option value="flexible">1週間以内</option>
+                                <option value="not-urgent">特に急がない</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">詳細・ご相談内容 *</label>
+                            <textarea id="message" required placeholder="・撮影したい商品について
+・理想とするモデルのイメージ
+・使用用途（Amazon、楽天、自社サイトなど）
+・その他ご質問やご要望
+
+など、お気軽にお聞かせください。"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="privacy" required style="margin-right: 0.5rem;">
+                                <a href="#privacy-policy" style="color: #667eea;">プライバシーポリシー</a>に同意します *
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" style="margin-right: 0.5rem;">
+                                お得な情報やサービス更新情報の配信を希望する
+                            </label>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <button type="submit" class="cta-button" style="padding: 1rem 3rem; font-size: 1.1rem;">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">よくある質問</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                        <div class="faq-question" style="background: #fff; padding: 1.5rem; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">
+                            相談や見積もりは本当に無料ですか？
+                        </div>
+                        <div class="faq-answer" style="padding: 1.5rem; background: #f9f9f9; display: none;">
+                            はい、相談・見積もりは完全無料です。お客様の商品やご要望をお聞きして、最適なプランをご提案いたします。費用が発生するのは制作開始時のみです。
+                        </div>
+                    </div>
+                    <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                        <div class="faq-question" style="background: #fff; padding: 1.5rem; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">
+                            どのくらいで返信がもらえますか？
+                        </div>
+                        <div class="faq-answer" style="padding: 1.5rem; background: #f9f9f9; display: none;">
+                            メールでのお問い合わせは1営業日以内、お急ぎの場合はお電話でのご相談も可能です。営業時間は平日9:00-18:00となっております。
+                        </div>
+                    </div>
+                    <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                        <div class="faq-question" style="background: #fff; padding: 1.5rem; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">
+                            商品を送る前に相談できますか？
+                        </div>
+                        <div class="faq-answer" style="padding: 1.5rem; background: #f9f9f9; display: none;">
+                            もちろんです。商品の写真やイメージをお送りいただければ、事前にモデルのサンプルや撮影プランをご提案できます。
+                        </div>
+                    </div>
+                    <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+                        <div class="faq-question" style="background: #fff; padding: 1.5rem; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">
+                            対応していない商品はありますか？
+                        </div>
+                        <div class="faq-answer" style="padding: 1.5rem; background: #f9f9f9; display: none;">
+                            基本的にどのような商品でも対応可能ですが、サイズや特殊な形状によっては制約がある場合があります。まずはお気軽にご相談ください。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会社情報・アクセス -->
+        <section style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="section-title">会社情報・アクセス</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem; color: #333;">AI Model Photo株式会社</h3>
+                        <div style="line-height: 2;">
+                            <p><strong>住所：</strong><br>
+                            〒150-0002<br>
+                            東京都渋谷区渋谷2-1-1 渋谷クロスタワー 15F</p>
+                            
+                            <p><strong>電話：</strong><br>
+                            03-1234-5678</p>
+                            
+                            <p><strong>FAX：</strong><br>
+                            03-1234-5679</p>
+                            
+                            <p><strong>メール：</strong><br>
+                            info@aimodelphoto.com</p>
+                            
+                            <p><strong>営業時間：</strong><br>
+                            平日 9:00-18:00<br>
+                            土日祝日は休業</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem; color: #333;">アクセス</h3>
+                        <div style="background: #ddd; height: 250px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666; margin-bottom: 1rem;">
+                            Google Map
+                        </div>
+                        <p style="line-height: 1.8; color: #666;">
+                            <strong>JR山手線・東急東横線・東急田園都市線・東京メトロ</strong><br>
+                            「渋谷駅」徒歩5分<br><br>
+                            
+                            <strong>東京メトロ半蔵門線・副都心線</strong><br>
+                            「渋谷駅」直結
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ後の流れ -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">お問い合わせ後の流れ</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem;">1</div>
+                        <h3>お問い合わせ受付</h3>
+                        <p>フォーム送信後、自動返信メールをお送りします。内容を確認後、1営業日以内にご連絡いたします。</p>
+                    </div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem;">2</div>
+                        <h3>ヒアリング</h3>
+                        <p>お電話またはオンラインで詳細をお聞きします。商品の特徴やご希望を詳しく伺います。</p>
+                    </div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem;">3</div>
+                        <h3>提案・見積もり</h3>
+                        <p>最適なプランと詳細な見積もりをご提案。モデルのサンプルもお見せします。</p>
+                    </div>
+                    <div style="text-align: center; padding: 2rem;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin: 0 auto 1rem;">4</div>
+                        <h3>契約・制作開始</h3>
+                        <p>ご了承いただけましたら契約手続きを行い、制作を開始いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAセクション -->
+        <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">まずはお気軽にご相談ください</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    些細なことでも構いません<br>
+                    専門スタッフが丁寧にお答えいたします
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact-form" class="cta-button" style="background: white; color: #667eea;">フォームで相談</a>
+                    <a href="tel:03-1234-5678" class="cta-button" style="background: transparent; border: 2px solid white;">電話で相談</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Model Photo</h4>
+                    <p>最新のAI技術とプロの撮影技術で、<br>理想の商品画像を制作します。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="services.html">サービス紹介</a></li>
+                        <li><a href="portfolio.html">制作事例</a></li>
+                        <li><a href="pricing.html">料金プラン</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="#privacy">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <p>📧 info@aimodelphoto.com<br>📞 03-1234-5678<br>営業時間：平日9:00-18:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Model Photo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
