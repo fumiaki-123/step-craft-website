@@ -322,10 +322,16 @@ body {
     transition: var(--transition);
     text-align: center;
     padding: 1rem;
+    z-index: 2;
 }
 
 .service-item:hover .service-overlay {
-    opacity: 1;
+    opacity: 0.9;
+}
+
+/* Temporary: Show images without overlay for debugging */
+.service-overlay {
+    display: none !important;
 }
 
 .service-overlay h3 {
