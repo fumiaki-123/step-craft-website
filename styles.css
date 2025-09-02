@@ -1,14 +1,29 @@
-/* MI-6スタイルのCSS */
+/* MI-6スタイルのモダンCSS */
+:root {
+    --color-blue: #0066cc;
+    --color-dark: #1a1a1a;
+    --color-gray: #666;
+    --color-light-gray: #f5f5f5;
+    --color-white: #ffffff;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--color-dark);
     overflow-x: hidden;
 }
 
@@ -18,7 +33,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header - MI-6スタイル */
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -27,96 +42,98 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
 }
 
-.header .container {
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo {
+.logo a {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #0066cc;
+    color: var(--color-blue);
+    text-decoration: none;
     letter-spacing: -0.5px;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 2rem;
 }
 
-.nav-menu a {
+.nav-link {
     text-decoration: none;
-    color: #333;
+    color: var(--color-dark);
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.3s ease;
+    transition: var(--transition);
     position: relative;
 }
 
-.nav-menu a:hover {
-    color: #0066cc;
+.nav-link:hover {
+    color: var(--color-blue);
 }
 
-.nav-menu a:hover::after {
+.nav-link:hover::after {
     content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 100%;
     height: 2px;
-    background: #0066cc;
+    background: var(--color-blue);
+    animation: slideIn 0.3s ease;
 }
 
-.nav-buttons {
+.nav-actions {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .btn {
-    padding: 8px 20px;
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
-    border: 2px solid #0066cc;
+    transition: var(--transition);
+    border: 2px solid var(--color-blue);
     display: inline-block;
+    text-align: center;
 }
 
 .btn-outline {
-    color: #0066cc;
+    color: var(--color-blue);
     background: transparent;
 }
 
 .btn-outline:hover {
-    background: #0066cc;
-    color: white;
+    background: var(--color-blue);
+    color: var(--color-white);
+    transform: translateY(-2px);
 }
 
 .btn-primary {
-    background: #0066cc;
-    color: white;
-    border-color: #0066cc;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-color: var(--color-blue);
 }
 
 .btn-primary:hover {
     background: #0052a3;
     border-color: #0052a3;
+    transform: translateY(-2px);
 }
 
-/* Hero Section - MI-6スタイル */
-.hero {
+/* Hero Section */
+.hero-section {
     height: 100vh;
     position: relative;
     display: flex;
@@ -125,7 +142,7 @@ body {
     overflow: hidden;
 }
 
-.hero-slider {
+.hero-carousel {
     position: absolute;
     top: 0;
     left: 0;
@@ -134,6 +151,11 @@ body {
 }
 
 .hero-slide {
+    position: relative;
+    height: 100vh;
+}
+
+.hero-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -150,28 +172,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(0, 82, 163, 0.6));
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.8), rgba(26, 26, 26, 0.6));
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     text-align: center;
-    color: white;
+    color: var(--color-white);
     max-width: 900px;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     letter-spacing: -1px;
     line-height: 1.2;
 }
 
 .hero-description {
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     font-weight: 300;
     line-height: 1.7;
     opacity: 0.95;
@@ -179,66 +201,66 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 100px 0;
+    padding: 6rem 0;
+    position: relative;
 }
 
 .section:nth-child(even) {
-    background: #f8f9fa;
+    background: var(--color-light-gray);
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 60px;
-    color: #333;
+    margin-bottom: 4rem;
+    color: var(--color-dark);
     letter-spacing: -1px;
 }
 
 .subsection-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
-    margin-bottom: 40px;
-    color: #333;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
 }
 
-/* Vision Section */
-.vision-content {
+/* Future Section */
+.future-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.vision-text {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+.future-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--color-gray);
 }
 
-/* Work Section - MI-6スタイル */
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    margin-bottom: 60px;
+/* Work Section */
+.work-carousel {
+    margin-top: 3rem;
 }
 
-.work-item {
-    background: white;
-    border-radius: 12px;
+.work-card {
+    background: var(--color-white);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
 }
 
-.work-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
 }
 
 .work-image {
-    height: 200px;
+    height: 250px;
+    position: relative;
     overflow: hidden;
 }
 
@@ -246,28 +268,52 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
-.work-item:hover .work-image img {
-    transform: scale(1.05);
+.work-card:hover .work-image img {
+    transform: scale(1.1);
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(26, 26, 26, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.work-overlay h3 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.work-card:hover .work-overlay {
+    opacity: 1;
 }
 
 .work-content {
-    padding: 30px;
+    padding: 2rem;
 }
 
 .work-content h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
 }
 
 .work-content p {
     font-size: 1rem;
-    margin-bottom: 20px;
-    color: #666;
+    margin-bottom: 1.5rem;
+    color: var(--color-gray);
     line-height: 1.6;
 }
 
@@ -276,53 +322,55 @@ body {
 }
 
 .work-features li {
-    padding: 5px 0;
-    color: #555;
+    padding: 0.5rem 0;
+    color: var(--color-gray);
     font-size: 0.95rem;
     position: relative;
-    padding-left: 20px;
+    padding-left: 1.5rem;
 }
 
-.work-features li:before {
+.work-features li::before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #0066cc;
+    color: var(--color-blue);
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
-/* People Section - MI-6スタイル */
-.people {
-    background: white;
+/* People Section */
+.interviews {
+    margin-bottom: 4rem;
 }
 
 .interview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .interview-card {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
     border: 1px solid #f0f0f0;
 }
 
 .interview-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
 }
 
 .interview-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--color-blue);
 }
 
 .interview-image img {
@@ -332,89 +380,97 @@ body {
 }
 
 .interview-content h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
 }
 
 .position {
-    font-size: 0.95rem;
-    color: #0066cc;
+    font-size: 1rem;
+    color: var(--color-blue);
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
 }
 
 .department {
     font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 5px;
+    color: var(--color-gray);
+    margin-bottom: 0.3rem;
 }
 
 .join-year {
     font-size: 0.85rem;
     color: #999;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .interview-excerpt {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--color-gray);
     font-style: italic;
+    border-left: 3px solid var(--color-blue);
+    padding-left: 1rem;
 }
 
 .group-talks {
     text-align: center;
-    padding: 40px;
-    background: #f8f9fa;
-    border-radius: 12px;
 }
 
-.group-talk-item h4 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #333;
+.group-talk-card {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.group-talk-item p {
-    color: #666;
-    font-size: 1rem;
+.group-talk-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.group-talk-card p {
+    color: var(--color-gray);
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
 /* Environment Section */
-.environment {
-    background: #f8f9fa;
-}
-
 .environment-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .environment-feature {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 4rem;
 }
 
 .environment-feature h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark);
 }
 
 .environment-feature p {
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1.2rem;
+    color: var(--color-gray);
     line-height: 1.7;
 }
 
 .environment-stats {
     display: flex;
     justify-content: space-around;
-    margin: 60px 0;
+    margin: 4rem 0;
     text-align: center;
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
 .stat-item {
@@ -422,79 +478,95 @@ body {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 700;
-    color: #0066cc;
-    margin-bottom: 10px;
+    color: var(--color-blue);
+    margin-bottom: 0.5rem;
+    font-family: 'Arial', sans-serif;
 }
 
 .stat-label {
     font-size: 1rem;
-    color: #666;
+    color: var(--color-gray);
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .environment-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
 }
 
 .feature-item {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .feature-item h4 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
 }
 
 .feature-item p {
-    color: #666;
+    color: var(--color-gray);
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 /* CTA Section */
-.cta {
-    background: white;
+.cta-section {
+    background: var(--color-white);
 }
 
 .cta-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 60px;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 4rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .recruit-info, .contact-info {
     text-align: center;
-    padding: 40px;
-    background: #f8f9fa;
-    border-radius: 12px;
+    padding: 3rem;
+    background: var(--color-light-gray);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
 .recruit-info h3, .contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--color-dark);
 }
 
 .job-list {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .job-list li {
-    padding: 10px 0;
-    font-size: 1rem;
-    color: #555;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--color-gray);
     border-bottom: 1px solid #e0e0e0;
+    transition: var(--transition);
+}
+
+.job-list li:hover {
+    color: var(--color-blue);
+    transform: translateX(5px);
 }
 
 .job-list li:last-child {
@@ -502,123 +574,162 @@ body {
 }
 
 .contact-info p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: var(--color-gray);
+    margin-bottom: 2rem;
     line-height: 1.6;
 }
 
-/* Footer - MI-6スタイル */
+/* Footer */
 .footer {
-    background: #333;
-    color: white;
-    padding: 40px 0 20px;
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: 3rem 0 1.5rem;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .footer-links, .footer-social {
     display: flex;
-    gap: 30px;
+    gap: 2rem;
 }
 
 .footer-links a, .footer-social a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    transition: var(--transition);
 }
 
 .footer-links a:hover, .footer-social a:hover {
-    color: #0066cc;
+    color: var(--color-blue);
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid #555;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
 }
 
 .footer-legal {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .footer-legal a {
     color: #ccc;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    transition: var(--transition);
 }
 
 .footer-legal a:hover {
-    color: white;
+    color: var(--color-white);
 }
 
 .copyright {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #ccc;
 }
 
+/* Animations */
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+.fade-in:nth-child(5) { animation-delay: 0.5s; }
+
 /* Responsive Design */
-@media (max-width: 768px) {
-    .nav-menu, .nav-buttons {
-        display: none;
-    }
-    
-    .header .container {
-        justify-content: center;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-    
-    .section {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .work-grid {
+@media (max-width: 1024px) {
+    .environment-features {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .interview-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .environment-stats {
-        flex-direction: column;
-        gap: 30px;
     }
     
     .cta-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu, .nav-actions {
+        display: none;
+    }
+    
+    .nav-container {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .interview-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .environment-stats {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
     }
     
     .footer-content, .footer-bottom {
         flex-direction: column;
-        gap: 20px;
+        gap: 1.5rem;
         text-align: center;
     }
     
     .footer-links, .footer-social, .footer-legal {
         flex-direction: column;
-        gap: 15px;
+        gap: 1rem;
     }
 }

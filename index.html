@@ -5,323 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step Craft - 総合Webソリューション・事業推進サービス</title>
     <meta name="description" content="広告運用代行からWebサイト制作、画像制作、コンサルティング、SIM営業販売まで。貴社の事業成長を総合的にサポートします。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- ヘッダー（MI-6と同じ構成） -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">Step Craft</div>
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="#vision">Step Craftが目指す未来</a></li>
-                    <li><a href="#work">仕事を知る</a></li>
-                    <li><a href="#people">人を知る</a></li>
-                    <li><a href="#environment">環境を知る</a></li>
-                </ul>
-                <div class="nav-buttons">
-                    <a href="#recruit" class="btn btn-outline">募集職種</a>
-                    <a href="#contact" class="btn btn-primary">カジュアル面談</a>
-                </div>
-            </nav>
-        </div>
+    <!-- ヘッダー -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="#home">Step Craft</a>
+            </div>
+            <ul class="nav-menu" data-nav-menu>
+                <li><a href="#future" class="nav-link">Step Craftが目指す未来</a></li>
+                <li><a href="#work" class="nav-link">仕事を知る</a></li>
+                <li><a href="#people" class="nav-link">人を知る</a></li>
+                <li><a href="#environment" class="nav-link">環境を知る</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#recruit" class="btn btn-outline">募集職種</a>
+                <a href="#contact" class="btn btn-primary">カジュアル面談</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- メインビジュアル（MI-6スタイル） -->
-    <section class="hero">
-        <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('images/hero-bg.jpg')">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title">課題を解決し、技術を繋ぎ、<br>成長を拓く。</h1>
-                    <p class="hero-description">
-                        Step Craftは企業の抱える様々な課題に対して、最新のデジタル技術と豊富な経験を活かし、<br>
-                        広告運用からWebサイト制作、コンサルティングまで幅広いソリューションで事業成長を支援します。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Step Craftが目指す未来 -->
-    <section id="vision" class="section vision">
-        <div class="container">
-            <h2 class="section-title">Step Craftが目指す未来</h2>
-            <div class="vision-content">
-                <p class="vision-text">
-                    デジタル変革が加速する現代において、企業が持続的な成長を実現するためには、<br>
-                    技術革新への対応と戦略的な事業推進が不可欠です。
-                </p>
-                <p class="vision-text">
-                    私たちStep Craftは、お客様の課題を深く理解し、最適なソリューションを提供することで、<br>
-                    企業の成長を次のステップへと導くパートナーとして存在します。
-                </p>
-                <p class="vision-text">
-                    技術と創造力を融合させ、持続可能で革新的なビジネス成長を実現する未来を共に築いていきます。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 仕事を知る（MI-6のWorkセクションと同構成） -->
-    <section id="work" class="section work">
-        <div class="container">
-            <h2 class="section-title">仕事を知る</h2>
-            <div class="work-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/work1.jpg" alt="広告運用代行">
-                    </div>
-                    <div class="work-content">
-                        <h3>広告運用代行</h3>
-                        <p>Google・Yahoo・SNS広告の戦略立案から運用、効果測定まで一貫してサポート。ROI最大化を実現します。</p>
-                        <ul class="work-features">
-                            <li>戦略立案・キャンペーン設計</li>
-                            <li>運用最適化・効果測定</li>
-                            <li>詳細レポート・改善提案</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/work2.jpg" alt="Webサイト制作">
-                    </div>
-                    <div class="work-content">
-                        <h3>HP・Webサービス制作</h3>
-                        <p>企業の魅力を最大限に引き出すWebサイトを制作。SEO対策、レスポンシブデザイン対応で集客力を向上。</p>
-                        <ul class="work-features">
-                            <li>企画・設計・デザイン</li>
-                            <li>システム開発・CMS構築</li>
-                            <li>運用保守・継続改善</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/work3.jpg" alt="画像制作">
-                    </div>
-                    <div class="work-content">
-                        <h3>画像制作</h3>
-                        <p>ブランディングに必要な各種画像素材を高品質で制作。バナー、ロゴ、商品画像まで幅広く対応。</p>
-                        <ul class="work-features">
-                            <li>バナーデザイン・LP画像</li>
-                            <li>ロゴデザイン・ブランディング</li>
-                            <li>商品画像加工・レタッチ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 追加サービス -->
-            <div class="work-grid">
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/office1.jpg" alt="コンサルティング">
-                    </div>
-                    <div class="work-content">
-                        <h3>コンサルティング</h3>
-                        <p>ビジネス戦略立案から実行支援まで、経験豊富なコンサルタントが企業成長をトータルサポート。</p>
-                        <ul class="work-features">
-                            <li>戦略立案・市場分析</li>
-                            <li>業務改善・効率化支援</li>
-                            <li>実行支援・進捗管理</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/office2.jpg" alt="SIM営業販売">
-                    </div>
-                    <div class="work-content">
-                        <h3>SIM営業販売</h3>
-                        <p>法人向けSIMサービスの提案・販売代行。通信コスト削減と業務効率化を実現するプランをご提案。</p>
-                        <ul class="work-features">
-                            <li>コスト分析・最適化提案</li>
-                            <li>契約サポート・導入支援</li>
-                            <li>運用サポート・アフターケア</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="work-item">
-                    <div class="work-image">
-                        <img src="images/office3.jpg" alt="事業推進代行">
-                    </div>
-                    <div class="work-content">
-                        <h3>事業推進代行</h3>
-                        <p>新規事業の立ち上げから既存事業の拡大まで、事業推進のプロが実行をサポート。</p>
-                        <ul class="work-features">
-                            <li>事業企画・市場調査</li>
-                            <li>推進計画・実行管理</li>
-                            <li>成果測定・改善施策</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 人を知る（MI-6のPeopleセクションと同構成） -->
-    <section id="people" class="section people">
-        <div class="container">
-            <h2 class="section-title">人を知る</h2>
-            
-            <!-- 社員インタビュー -->
-            <div class="people-interviews">
-                <h3 class="subsection-title">社員インタビュー</h3>
-                <div class="interview-grid">
-                    <div class="interview-card">
-                        <div class="interview-image">
-                            <img src="images/team1.jpg" alt="広告運用担当 田中">
-                        </div>
-                        <div class="interview-content">
-                            <h4>田中 健太</h4>
-                            <p class="position">広告運用チーム / マネージャー</p>
-                            <p class="department">デジタルマーケティング部</p>
-                            <p class="join-year">2019年入社</p>
-                            <p class="interview-excerpt">
-                                「クライアント様の成果を数値で実感できる瞬間が一番のやりがい。データ分析から得られる洞察を活かし、より良い提案ができるよう日々学習を続けています。」
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="interview-card">
-                        <div class="interview-image">
-                            <img src="images/team2.jpg" alt="Webデザイナー 佐藤">
-                        </div>
-                        <div class="interview-content">
-                            <h4>佐藤 美香</h4>
-                            <p class="position">Webデザイナー / シニア</p>
-                            <p class="department">制作部</p>
-                            <p class="join-year">2020年入社</p>
-                            <p class="interview-excerpt">
-                                「お客様の想いをカタチにする瞬間が最も充実感を感じます。ユーザビリティとデザイン性を両立させた制作物で、ビジネス成果に貢献できることに誇りを感じています。」
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="interview-card">
-                        <div class="interview-image">
-                            <img src="images/team4.jpg" alt="エンジニア 山田">
-                        </div>
-                        <div class="interview-content">
-                            <h4>山田 大輔</h4>
-                            <p class="position">フロントエンドエンジニア / リーダー</p>
-                            <p class="department">開発部</p>
-                            <p class="join-year">2018年入社</p>
-                            <p class="interview-excerpt">
-                                「最新技術を活用しながら、パフォーマンスと保守性を両立したシステムを構築することにやりがいを感じています。チーム全体のスキル向上にも積極的に取り組んでいます。」
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="interview-card">
-                        <div class="interview-image">
-                            <img src="images/team5.jpg" alt="コンサルタント 鈴木">
-                        </div>
-                        <div class="interview-content">
-                            <h4>鈴木 智子</h4>
-                            <p class="position">ビジネスコンサルタント / マネージャー</p>
-                            <p class="department">コンサルティング部</p>
-                            <p class="join-year">2017年入社</p>
-                            <p class="interview-excerpt">
-                                「お客様の課題を深く理解し、最適なソリューションを提案できた時の達成感は格別です。長期的なパートナーシップを築き、継続的な成長支援ができることに価値を感じています。」
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="interview-card">
-                        <div class="interview-image">
-                            <img src="images/team6.jpg" alt="営業担当 高橋">
-                        </div>
-                        <div class="interview-content">
-                            <h4>高橋 雄一</h4>
-                            <p class="position">セールス / シニア</p>
-                            <p class="department">営業部</p>
-                            <p class="join-year">2021年入社</p>
-                            <p class="interview-excerpt">
-                                「お客様との信頼関係を築き、ビジネス成果に直結する提案ができることにやりがいを感じています。多様なサービスを扱えるため、総合的な解決策を提供できる点が魅力です。」
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- グループトーク -->
-            <div class="group-talks">
-                <h3 class="subsection-title">グループトーク</h3>
-                <div class="group-talk-item">
-                    <h4>組織について語ろう</h4>
-                    <p>各部署のメンバーが集まり、Step Craftの組織文化や働く環境について本音で語り合います。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 環境を知る（MI-6のEnvironmentセクションと同構成） -->
-    <section id="environment" class="section environment">
-        <div class="container">
-            <h2 class="section-title">環境を知る</h2>
-            
-            <div class="environment-content">
-                <div class="environment-feature">
-                    <h3>柔軟な働き方を実現</h3>
-                    <p>リモートワークとオフィス勤務のハイブリッド型で、ワークライフバランスを重視した働き方を推進しています。</p>
-                </div>
-                
-                <div class="environment-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">社員満足度</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">30代</div>
-                        <div class="stat-label">平均年齢</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">プロジェクト成功率</div>
-                    </div>
-                </div>
-                
-                <div class="environment-features">
-                    <div class="feature-item">
-                        <h4>成長を支援する環境</h4>
-                        <p>スキルアップ支援制度や外部研修参加など、個人の成長をサポートする制度が充実しています。</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>チームワークを重視</h4>
-                        <p>部署を超えたプロジェクト参加や定期的な懇親会など、チーム一体となって取り組める環境があります。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Our Team（MI-6のCTAセクションと同構成） -->
-    <section id="recruit" class="section cta">
-        <div class="container">
-            <h2 class="section-title">Join Our Team</h2>
-            <div class="cta-content">
-                <div class="recruit-info">
-                    <h3>募集職種</h3>
-                    <ul class="job-list">
-                        <li>広告運用スペシャリスト</li>
-                        <li>Webデザイナー・フロントエンドエンジニア</li>
-                        <li>ビジネスコンサルタント</li>
-                        <li>営業・事業開発</li>
+    <main>
+        <!-- ヒーローセクション -->
+        <section id="home" class="hero-section">
+            <div class="hero-carousel splide" data-splide='{"type":"fade","rewind":true,"autoplay":true,"interval":4000}'>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide hero-slide">
+                            <div class="hero-bg" style="background-image: url('images/hero-bg.jpg')"></div>
+                            <div class="hero-overlay"></div>
+                        </li>
+                        <li class="splide__slide hero-slide">
+                            <div class="hero-bg" style="background-image: url('images/office1.jpg')"></div>
+                            <div class="hero-overlay"></div>
+                        </li>
+                        <li class="splide__slide hero-slide">
+                            <div class="hero-bg" style="background-image: url('images/work1.jpg')"></div>
+                            <div class="hero-overlay"></div>
+                        </li>
                     </ul>
                 </div>
-                
-                <div id="contact" class="contact-info">
-                    <h3>カジュアル面談</h3>
-                    <p>まずはお気軽にお話しませんか。オンラインでの面談も可能です。</p>
-                    <a href="mailto:recruit@stepcraft.jp" class="btn btn-primary">面談を申し込む</a>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">課題を解決し、技術を繋ぎ、<br>成長を拓く。</h1>
+                <p class="hero-description fade-in">Step Craftは企業の抱える様々な課題に対して、最新のデジタル技術と豊富な経験を活かし、広告運用からWebサイト制作、コンサルティングまで幅広いソリューションで事業成長を支援します。</p>
+            </div>
+        </section>
+
+        <!-- Step Craftが目指す未来 -->
+        <section id="future" class="section future-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Step Craftが目指す未来</h2>
+                <div class="future-content">
+                    <p class="future-text fade-in">デジタル変革が加速する現代において、企業が持続的な成長を実現するためには、技術革新への対応と戦略的な事業推進が不可欠です。</p>
+                    <p class="future-text fade-in">私たちStep Craftは、お客様の課題を深く理解し、最適なソリューションを提供することで、企業の成長を次のステップへと導くパートナーとして存在します。</p>
+                    <p class="future-text fade-in">技術と創造力を融合させ、持続可能で革新的なビジネス成長を実現する未来を共に築いていきます。</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- フッター（MI-6と同構成） -->
+        <!-- 仕事を知る -->
+        <section id="work" class="section work-section">
+            <div class="container">
+                <h2 class="section-title fade-in">仕事を知る</h2>
+                <div class="work-carousel splide" data-splide='{"perPage":2,"gap":"2rem","breakpoints":{"768":{"perPage":1}}}'>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/work1.jpg" alt="広告運用代行" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>広告運用代行</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>広告運用代行</h3>
+                                        <p>Google・Yahoo・SNS広告の戦略立案から運用、効果測定まで一貫してサポート。ROI最大化を実現します。</p>
+                                        <ul class="work-features">
+                                            <li>戦略立案・キャンペーン設計</li>
+                                            <li>運用最適化・効果測定</li>
+                                            <li>詳細レポート・改善提案</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/work2.jpg" alt="Webサイト制作" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>HP・Webサービス制作</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>HP・Webサービス制作</h3>
+                                        <p>企業の魅力を最大限に引き出すWebサイトを制作。SEO対策、レスポンシブデザイン対応で集客力を向上。</p>
+                                        <ul class="work-features">
+                                            <li>企画・設計・デザイン</li>
+                                            <li>システム開発・CMS構築</li>
+                                            <li>運用保守・継続改善</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/work3.jpg" alt="画像制作" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>画像制作</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>画像制作</h3>
+                                        <p>ブランディングに必要な各種画像素材を高品質で制作。バナー、ロゴ、商品画像まで幅広く対応。</p>
+                                        <ul class="work-features">
+                                            <li>バナーデザイン・LP画像</li>
+                                            <li>ロゴデザイン・ブランディング</li>
+                                            <li>商品画像加工・レタッチ</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/office1.jpg" alt="コンサルティング" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>コンサルティング</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>コンサルティング</h3>
+                                        <p>ビジネス戦略立案から実行支援まで、経験豊富なコンサルタントが企業成長をトータルサポート。</p>
+                                        <ul class="work-features">
+                                            <li>戦略立案・市場分析</li>
+                                            <li>業務改善・効率化支援</li>
+                                            <li>実行支援・進捗管理</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/office2.jpg" alt="SIM営業販売" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>SIM営業販売</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>SIM営業販売</h3>
+                                        <p>法人向けSIMサービスの提案・販売代行。通信コスト削減と業務効率化を実現するプランをご提案。</p>
+                                        <ul class="work-features">
+                                            <li>コスト分析・最適化提案</li>
+                                            <li>契約サポート・導入支援</li>
+                                            <li>運用サポート・アフターケア</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="work-card">
+                                    <div class="work-image">
+                                        <img src="images/office3.jpg" alt="事業推進代行" loading="lazy">
+                                        <div class="work-overlay">
+                                            <h3>事業推進代行</h3>
+                                        </div>
+                                    </div>
+                                    <div class="work-content">
+                                        <h3>事業推進代行</h3>
+                                        <p>新規事業の立ち上げから既存事業の拡大まで、事業推進のプロが実行をサポート。</p>
+                                        <ul class="work-features">
+                                            <li>事業企画・市場調査</li>
+                                            <li>推進計画・実行管理</li>
+                                            <li>成果測定・改善施策</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 人を知る -->
+        <section id="people" class="section people-section">
+            <div class="container">
+                <h2 class="section-title fade-in">人を知る</h2>
+                
+                <!-- 社員インタビュー -->
+                <div class="interviews">
+                    <h3 class="subsection-title fade-in">社員インタビュー</h3>
+                    <div class="interview-grid">
+                        <div class="interview-card fade-in">
+                            <div class="interview-image">
+                                <img src="images/team1.jpg" alt="田中健太" loading="lazy">
+                            </div>
+                            <div class="interview-content">
+                                <h4>田中 健太</h4>
+                                <p class="position">広告運用チーム / マネージャー</p>
+                                <p class="department">デジタルマーケティング部</p>
+                                <p class="join-year">2019年入社</p>
+                                <p class="interview-excerpt">「クライアント様の成果を数値で実感できる瞬間が一番のやりがい。データ分析から得られる洞察を活かし、より良い提案ができるよう日々学習を続けています。」</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interview-card fade-in">
+                            <div class="interview-image">
+                                <img src="images/team2.jpg" alt="佐藤美香" loading="lazy">
+                            </div>
+                            <div class="interview-content">
+                                <h4>佐藤 美香</h4>
+                                <p class="position">Webデザイナー / シニア</p>
+                                <p class="department">制作部</p>
+                                <p class="join-year">2020年入社</p>
+                                <p class="interview-excerpt">「お客様の想いをカタチにする瞬間が最も充実感を感じます。ユーザビリティとデザイン性を両立させた制作物で、ビジネス成果に貢献できることに誇りを感じています。」</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interview-card fade-in">
+                            <div class="interview-image">
+                                <img src="images/team4.jpg" alt="山田大輔" loading="lazy">
+                            </div>
+                            <div class="interview-content">
+                                <h4>山田 大輔</h4>
+                                <p class="position">フロントエンドエンジニア / リーダー</p>
+                                <p class="department">開発部</p>
+                                <p class="join-year">2018年入社</p>
+                                <p class="interview-excerpt">「最新技術を活用しながら、パフォーマンスと保守性を両立したシステムを構築することにやりがいを感じています。チーム全体のスキル向上にも積極的に取り組んでいます。」</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interview-card fade-in">
+                            <div class="interview-image">
+                                <img src="images/team5.jpg" alt="鈴木智子" loading="lazy">
+                            </div>
+                            <div class="interview-content">
+                                <h4>鈴木 智子</h4>
+                                <p class="position">ビジネスコンサルタント / マネージャー</p>
+                                <p class="department">コンサルティング部</p>
+                                <p class="join-year">2017年入社</p>
+                                <p class="interview-excerpt">「お客様の課題を深く理解し、最適なソリューションを提案できた時の達成感は格別です。長期的なパートナーシップを築き、継続的な成長支援ができることに価値を感じています。」</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interview-card fade-in">
+                            <div class="interview-image">
+                                <img src="images/team6.jpg" alt="高橋雄一" loading="lazy">
+                            </div>
+                            <div class="interview-content">
+                                <h4>高橋 雄一</h4>
+                                <p class="position">セールス / シニア</p>
+                                <p class="department">営業部</p>
+                                <p class="join-year">2021年入社</p>
+                                <p class="interview-excerpt">「お客様との信頼関係を築き、ビジネス成果に直結する提案ができることにやりがいを感じています。多様なサービスを扱えるため、総合的な解決策を提供できる点が魅力です。」</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- グループトーク -->
+                <div class="group-talks fade-in">
+                    <h3 class="subsection-title">グループトーク</h3>
+                    <div class="group-talk-card">
+                        <h4>組織について語ろう</h4>
+                        <p>各部署のメンバーが集まり、Step Craftの組織文化や働く環境について本音で語り合います。プロダクトへの想いや、今後のビジョンについて、率直な意見交換を行っています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 環境を知る -->
+        <section id="environment" class="section environment-section">
+            <div class="container">
+                <h2 class="section-title fade-in">環境を知る</h2>
+                
+                <div class="environment-content">
+                    <div class="environment-feature fade-in">
+                        <h3>柔軟な働き方を実現</h3>
+                        <p>リモートワークとオフィス勤務のハイブリッド型で、ワークライフバランスを重視した働き方を推進しています。個人の生産性を最大化できる環境づくりに取り組んでいます。</p>
+                    </div>
+                    
+                    <div class="environment-stats fade-in">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="95">0</div>
+                            <div class="stat-label">%<br>社員満足度</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="30">0</div>
+                            <div class="stat-label">代<br>平均年齢</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-label">%<br>プロジェクト成功率</div>
+                        </div>
+                    </div>
+                    
+                    <div class="environment-features">
+                        <div class="feature-item fade-in">
+                            <h4>成長を支援する環境</h4>
+                            <p>スキルアップ支援制度や外部研修参加など、個人の成長をサポートする制度が充実しています。新しい技術や手法を学び、キャリアアップを図れる環境を提供します。</p>
+                        </div>
+                        <div class="feature-item fade-in">
+                            <h4>チームワークを重視</h4>
+                            <p>部署を超えたプロジェクト参加や定期的な懇親会など、チーム一体となって取り組める環境があります。多様な視点を活かした協働により、より良い成果を生み出します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Our Team -->
+        <section id="recruit" class="section cta-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Join Our Team</h2>
+                <div class="cta-content">
+                    <div class="recruit-info fade-in">
+                        <h3>募集職種</h3>
+                        <ul class="job-list">
+                            <li>広告運用スペシャリスト</li>
+                            <li>Webデザイナー・フロントエンドエンジニア</li>
+                            <li>ビジネスコンサルタント</li>
+                            <li>営業・事業開発</li>
+                        </ul>
+                    </div>
+                    
+                    <div id="contact" class="contact-info fade-in">
+                        <h3>カジュアル面談</h3>
+                        <p>まずはお気軽にお話しませんか。オンラインでの面談も可能です。あなたのキャリアプランについて一緒に考えさせていただきます。</p>
+                        <a href="mailto:recruit@stepcraft.jp" class="btn btn-primary">面談を申し込む</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -330,8 +355,8 @@
                     <a href="#lab">Step Craft Lab</a>
                 </div>
                 <div class="footer-social">
-                    <a href="#twitter">Twitter</a>
-                    <a href="#linkedin">LinkedIn</a>
+                    <a href="#twitter" aria-label="Twitter">Twitter</a>
+                    <a href="#linkedin" aria-label="LinkedIn">LinkedIn</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -346,6 +371,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
