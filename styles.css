@@ -242,9 +242,9 @@ body {
 /* Services Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 200px);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 2rem;
     margin: 3rem 0;
     max-width: 1200px;
     margin-left: auto;
@@ -261,16 +261,16 @@ body {
 
 .service-large {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 1;
 }
 
 .service-wide {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1;
 }
 
 .service-wide-2 {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 1;
 }
 
@@ -281,7 +281,7 @@ body {
 
 .service-tall {
     grid-column: span 1;
-    grid-row: span 2;
+    grid-row: span 1;
 }
 
 .service-medium {
@@ -748,11 +748,17 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        gap: 1.5rem;
     }
     
     .service-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .service-wide-2 {
         grid-column: span 2;
         grid-row: span 1;
     }
@@ -805,8 +811,8 @@ body {
     
     .services-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 250px);
-        gap: 1.5rem;
+        grid-template-rows: repeat(6, 200px);
+        gap: 1rem;
     }
     
     .service-large, .service-wide, .service-wide-2, .service-square, .service-tall, .service-medium {
